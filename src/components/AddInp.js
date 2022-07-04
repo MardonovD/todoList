@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
+import { Action } from "../redux/valueAction";
 
 const AddInp = () => {
+  const [state, setState] = useState("");
   const dispatch = useDispatch();
 
-  // const [state, setState] = useState(null);
-
   const saveFunction = () => {
-    console.log(state);
+    dispatch(Action(state));
   };
 
   return (
@@ -16,6 +16,7 @@ const AddInp = () => {
       <Add>
         <input
           onChange={(e) => {
+            console.log(e.target.value);
             setState(e.target.value);
           }}
           type="text"
