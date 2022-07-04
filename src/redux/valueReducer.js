@@ -1,9 +1,9 @@
 import { Action } from "./valueAction";
 
-export const Reducer = (state = [], action) => {
-  switch (action.type) {
+export const Reducer = (state , { type, payload }) => {
+  switch (type) {
     case "ADD":
-      return [...state, action.payload];
+      return [...state, payload];
     default:
       return state;
   }

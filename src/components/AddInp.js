@@ -16,7 +16,6 @@ const AddInp = () => {
       <Add>
         <input
           onChange={(e) => {
-            console.log(e.target.value);
             setState(e.target.value);
           }}
           type="text"
