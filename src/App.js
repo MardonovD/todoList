@@ -2,10 +2,12 @@ import React from "react";
 import "./index.css";
 import AddInp from "./components/AddInp";
 import styled from "styled-components";
+import Card from "./components/Card";
 function App() {
   return (
     <Container>
       <AddInp />
+      <Card />
     </Container>
   );
 }

@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { textObj } from "../redux/Actions/text-action";
+import { useDispatch } from "react-redux";
 
 const AddInp = () => {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    dispatch(textObj(state));
-  }, [state]);
-
   const dispatch = useDispatch();
-  const store = useSelector((store) => store);
 
-  const saveFunction = () => {};
+  // const [state, setState] = useState(null);
+
+  const saveFunction = () => {
+    console.log(state);
+  };
+
   return (
     <Inp>
       <Add>

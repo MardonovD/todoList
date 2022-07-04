@@ -1,8 +1,10 @@
 import { createStore } from "redux";
-import { textReducer } from "./Reducers/text-Reducer";
+import { Reducer } from "./valueReducer";
 
-export const store = createStore(
-  textReducer,
+const store = createStore(
+  Reducer,
   {},
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+export default store;
